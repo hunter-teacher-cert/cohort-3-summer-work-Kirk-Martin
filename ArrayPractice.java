@@ -65,7 +65,7 @@ public class ArrayPractice
 
     // loop through each element of the array and
     /* YOUR BRILLIANT CODE HERE */
-      for (i =1; i<=data.lenght-1; i++){
+      for (i =1; i<=data.length-1; i++){
       data[i]=data[i-1] + step;
 }
     // assign the appropriate value to each one.
@@ -114,9 +114,9 @@ public class ArrayPractice
   public static void printArray( int[] data )
     {
     /* YOUR BRILLIANT CODE HERE */
-        for (int i=0; i<=data.lenght-1;i++){
+        for (int i=0; i<=data.length-1;i++){
 
-          System.out.print(data[i] + "");
+          System.out.print(data[i] + "    ");
     }
     System.out.println();
   }
