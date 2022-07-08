@@ -4,9 +4,9 @@ import java.util.*;
 
 /**
  * Time class by Team LucidThinkeren
- * First Last
- * collaborators: First Last, First Last
- */
+ * Kirk Martin in group 11 with
+ * collaborators: , Joel Bianchi, Jessica Novillo, Saranii Muller
+*/
 
 /**
    INSTRUCTIONS:
@@ -17,7 +17,7 @@ import java.util.*;
    Place this file in a folder named programming/5/Time.java
    Basic level (complete all):
    - public Time(int hrs, int mins, int secs) - constructor
-   - public String toString()
+   - public void toString()
    - public void set(int hrs, int mins, int secs)
    Intermediate level (complete Basic methods plus this method):
    - public void add(Time other)
@@ -39,11 +39,11 @@ public class Time {
     int minutes;
     int seconds;
 
-    // Constructors
+    // Constructor #1: Default Constructor has no parameters
     public Time(){
-	this.hours = 0;
-	this.minutes = 0;
-	this.seconds = 0;
+    	this.hours = 0;
+    	this.minutes = 0;
+    	this.seconds = 0;
 	
     }
 
@@ -53,9 +53,12 @@ public class Time {
        Initialize this instance to represent hrs:mins:secs as the time.
        
      */
+    //Constructor #2; takes in 3 different parameters
     public Time(int hrs, int mins, int secs){
 
-	// your code here
+    	this.hours = hrs;
+    	this.minutes = mins;
+    	this.seconds = secs;
 	
     }
     
@@ -66,7 +69,7 @@ public class Time {
        returns a string representation of the time
     */
     public String toString(){
-	return("This should be changed to return the time in a nice form");
+	    return("The time is: " + hours + minutes + seconds);
     }
 
 
