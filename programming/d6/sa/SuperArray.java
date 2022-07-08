@@ -1,6 +1,6 @@
 /**
  * SuperArray by Team MarvelvsDC
- * First Last
+ * Kirk, Ed, Taylor, Dave
  * collaborators: First Last, First Last
  */
 
@@ -36,9 +36,13 @@ public class SuperArray
   //overloaded constructor -- allows specification of initial capacity
   public SuperArray( int size )
   {
-    //init underlying/inner storage of specified capacity
+    
+		data=new int [size];
+		
+		//init underlying/inner storage of specified capacity
     /* YOUR SIMPLE+SMART CODE HERE */
 
+		numberElements = 0;
     //init instance vars
     /* YOUR SIMPLE+SMART CODE HERE */
 
@@ -49,9 +53,10 @@ public class SuperArray
   {
     //init underlying/inner storage of capacity 10
         /* YOUR SIMPLE+SMART CODE HERE */
-
+		data= new int[10];
     //init instance vars
         /* YOUR SIMPLE+SMART CODE HERE */
+		numberElements = 0;
   }
 
 
