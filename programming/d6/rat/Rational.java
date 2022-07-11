@@ -1,7 +1,7 @@
 /**
  * Rational class by Team BangPi
- * First Last
- * collaborators: First Last, First Last
+ * Kirk Martin
+ * Collaborators, Ed, Taylor, Dave
  */
 
 
