@@ -1,4 +1,5 @@
-//heading
+/*
+//*heading
 
 import java.io.*;
 import java.util.*;
@@ -87,4 +88,5 @@ public class SuperArray {
     // point data to the new array
 	
   }
-}
+}*/
+
