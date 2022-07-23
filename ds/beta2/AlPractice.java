@@ -1,5 +1,4 @@
-ls
-  import java.io.*;
+import java.io.*;
 import java.util.*;
 
 /** Methods to write
@@ -32,7 +31,16 @@ public class AlPractice{
     number between 0 and maxval (not including maxval).
   */
   public static ArrayList<Integer> buildRandomList(int size, int maxval){
-    return null;//placeholder to compile.
+      ArrayList<Integer> randomList = new ArrayList<Integer>(size);
+
+      Random rand = new Random();
+
+      for (int i = 0; i < size; i++){
+        int newRandom = rand.nextInt(maxval); //create a new random number
+        randomList.add(newRandom); //put the new number in our list
+      }
+
+      return randomList;//placeholder to compile.
   }
 
   /**
@@ -42,7 +50,13 @@ public class AlPractice{
   - The sum of all of the elements of the ArrayList.
   */
   public static int sumOfList(ArrayList<Integer> dataList){
-    return 0;//placeholder to compile.
+    int sum = 0; //
+
+    for(int i = 0; i < dataList.size(); i++){
+      sum += dataList.get(i); //arrayList is an object so we should use a dot method
+      //same as `sum = sum + dataList.get(i);
+    }
+    return sum;//placeholder to compile.
   }
 
   /**
@@ -58,7 +72,15 @@ public class AlPractice{
   - No other values should be modified.
   */
   public static void swapElements(ArrayList<Integer> dataList, int index1,int index2){
-
+    //index1 and index2 are valid indecies of dataList
+    //dataList.size();
+    if (index1 > dataList.size() || index2 > dataList.size()){
+      System.out.println("Invalid index. ");
+    } else{
+      int temp = dataList.get(index1); //get the value at index 1
+      dataList.set(index1, dataList.get(index2)); //get the value of
+      dataList.set(index2, temp); //put temp at index2 
+    }
   }
 
   /**
@@ -69,7 +91,13 @@ public class AlPractice{
   - The dataList is modified such that all occurances of valueToRemove are removed.
   */
   public static void removeValue(ArrayList<Integer> dataList, int valueToRemove){
-
+    //while valueToRemove is found the ArrayList, continue the loop to remove the valueToRemove
+    while(dataList.remove(new Integer(valueToRemove))); //mindblowing :D
+    // for(int i = 0; i < dataList.size(); i++){
+    //   if(dataList.get(i) == valueToRemove){
+    //     dataList.remove(i--);//built in remove function
+    //   }
+    // }
   }
 
 
@@ -105,31 +133,36 @@ public class AlPractice{
 
 
 
-public static void main(String[] args) {
+  public static void main(String[] args) {
 
-    ArrayList<Integer> al;
+    // ArrayList<Integer> al;
 
-    //Uncomment these to test buildRandomList
-    //al = buildRandomList(10,100);
+    // // Uncomment these to test buildRandomList
+    // al = buildRandomList(10,100);
+    // System.out.println(al);
+    // System.out.println("size: " + al.size()); //should print 10
+
+    // System.out.println("sum: " + sumOfList(al));
+    // System.out.println("swap first for last value");
+    // swapElements(al, 0, al.size()-1);
+    // System.out.println(al);
+
+    // Uncomment these to test swapElements
+    // swapElements(2,6);
     //System.out.println(al);
-
-    //Uncomment these to test swapElements
-    //swapElements(al,2,6); // NOTE: had to include al
-    //System.out.println(al);
-
+    ArrayList<Integer> al = new ArrayList<Integer>(); //create a new array list of type integer using the default constructor.
     // Uncomment these to test removeValue
-    //al.add(5);
-    //al.add(10);
-    //al.add(5);
-    //al.add(13);
-    //al.set(2,5);
-    //al.set(3,5);
-    //System.out.println(al); //NOTE:  this was listed as a, not al
-    //removeValue(al,5);
-    //System.out.println(al); //NOTE:  this was listed as a, not al
+    al.add(5);
+    al.add(10);
+    al.add(5);
+    al.add(13);
+    al.set(2,5);
+  
+    al.set(3,5);
+    System.out.println(al);
+    removeValue(al,5);
+    System.out.println(al);
 
   }
-
-
 
 }
