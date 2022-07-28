@@ -16,11 +16,23 @@ public class ExpressionTree{
     //"(5.0-8.0)" //a tree with 2 value children
     //"(12.5*(5.0-8.0)) //a tree that is the product of the previous two example trees
     //"(((2.0+1.0)/(8.0*0.43)) - 1.0)" //a tree with more
-    public String toString(){
-     return "replace this with your code";
-    }
-
-
+    public String toString()  {
+     if(isValue()){
+       return""+value;
+    }else if(left.isValue()&& right.isValue(){
+      return "("+left.value + operator+right.value +")";
+                           }else{
+       return"(" + left.toString() + operator+right.toString() +")";
+    // }
+    //*}
+    // }
+     //})
+    // }
+      
+    //  return "replace this with your code";
+   // }
+//*
+}
 
 
   private double value;
